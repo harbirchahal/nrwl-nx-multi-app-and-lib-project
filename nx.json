@@ -1,0 +1,48 @@
+{
+  "npmScope": "myorg",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "client": {
+      "tags": [
+        "client"
+      ]
+    },
+    "client-e2e": {
+      "tags": []
+    },
+    "admin": {
+      "tags": [
+        "admin"
+      ]
+    },
+    "admin-e2e": {
+      "tags": []
+    },
+    "ui-components": {
+      "tags": [
+        "ui"
+      ]
+    },
+    "ui-header": {
+      "tags": [
+        "ui"
+      ]
+    },
+    "ui-progress": {
+      "tags": [
+        "ui"
+      ]
+    },
+    "ui-messages": {
+      "tags": [
+        "ui"
+      ]
+    }
+  }
+}

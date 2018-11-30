@@ -1,0 +1,8 @@
+<ng-container *ngIf="toggle$ | async">
+  <mat-card>
+    <mat-card-subtitle>
+      <span>{{ facade.summary$ | async }}</span>
+      <mat-progress-bar [color]="color" mode="indeterminate"></mat-progress-bar>
+    </mat-card-subtitle>
+  </mat-card>
+</ng-container>

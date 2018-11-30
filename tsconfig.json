@@ -1,0 +1,43 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@myorg/profile": [
+        "libs/profile/src/index.ts"
+      ],
+      "@myorg/ui/libs": [
+        "libs/ui/libs/index.ts"
+      ],
+      "@myorg/ui/components": [
+        "libs/ui/components/src/index.ts"
+      ],
+      "@myorg/ui/header": [
+        "libs/ui/header/src/index.ts"
+      ],
+      "@myorg/ui/progress": [
+        "libs/ui/progress/src/index.ts"
+      ],
+      "@myorg/ui/messages": [
+        "libs/ui/messages/src/index.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

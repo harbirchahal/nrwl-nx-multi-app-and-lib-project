@@ -1,0 +1,23 @@
+<header>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span routerLink="/">{{ title }}</span>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>mood</mat-icon>
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/profile">
+    <mat-icon>person_outline</mat-icon>
+    <span>Profile</span>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>
+    <mat-icon>logout</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

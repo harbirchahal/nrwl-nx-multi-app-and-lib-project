@@ -1,0 +1,25 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <mat-card>
+    <mat-card-title>Profile Details</mat-card-title>
+    <mat-card-content>
+      <br />
+      <mat-form-field>
+        <input matInput placeholder="First name" formControlName="firstName" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Last name" formControlName="lastName" />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" mat-button (click)="onCancel()">Cancel</button>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="profileForm.invalid"
+      >
+        Save
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>
