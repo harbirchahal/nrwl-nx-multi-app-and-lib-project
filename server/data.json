@@ -1,6 +1,12 @@
 {
+  "login": {
+    "id": 1,
+    "token": "myorg-auth-token",
+    "role": "client"
+  },
+  "logout": {},
   "profile": {
-    "firstName": "Tom",
-    "lastName": "Cruise"
+    "firstName": "Will",
+    "lastName": "Smith"
   }
 }

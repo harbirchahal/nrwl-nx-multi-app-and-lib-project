@@ -16,8 +16,14 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@myorg/auth": [
+        "libs/auth/src/index.ts"
+      ],
       "@myorg/profile": [
         "libs/profile/src/index.ts"
+      ],
+      "@myorg/data-models": [
+        "libs/data-models/index.ts"
       ],
       "@myorg/ui/libs": [
         "libs/ui/libs/index.ts"

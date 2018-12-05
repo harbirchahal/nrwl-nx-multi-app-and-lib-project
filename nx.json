@@ -24,6 +24,11 @@
     "admin-e2e": {
       "tags": []
     },
+    "auth": {
+      "tags": [
+        "auth"
+      ]
+    },
     "ui-components": {
       "tags": [
         "ui"
