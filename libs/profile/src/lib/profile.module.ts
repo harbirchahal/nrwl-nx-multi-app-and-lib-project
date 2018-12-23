@@ -5,7 +5,6 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { MaterialModule } from '@myorg/ui/libs';
 import { DetailsComponent } from './details/details.component';
-import { ProfileRouterModule } from './profile.routes';
 import {
   RouterEffects,
   ProfileEffects,
@@ -22,7 +21,6 @@ import { ProfileService, ProfileResolver } from './+services';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    ProfileRouterModule,
     StoreModule.forFeature(PROFILE_FEATURE_KEY, profileReducer, {
       initialState
     }),

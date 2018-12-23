@@ -1,18 +1,11 @@
-import { NgModule } from '@angular/core';
-import { Route, RouterModule } from '@angular/router';
+import { Route } from '@angular/router';
 import { DetailsComponent } from './details/details.component';
 import { ProfileResolver } from './+services';
 
-export const routes: Route[] = [
+export const PROFILE_ROUTES: Route[] = [
   {
     path: 'profile',
     component: DetailsComponent,
     resolve: { inStore: ProfileResolver }
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ProfileRouterModule {}
