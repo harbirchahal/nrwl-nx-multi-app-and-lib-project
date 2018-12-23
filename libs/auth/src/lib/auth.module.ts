@@ -5,6 +5,7 @@ import { MaterialModule } from '@myorg/ui/libs';
 import { AuthService, AuthGuard, AuthTokenService } from './+services';
 import { AuthFacade } from './+state';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,10 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     MaterialModule
   ],
-  declarations: [LoginComponent],
+  declarations: [
+    LoginComponent,
+    LogoutComponent
+  ],
   providers: [
     AuthService,
     AuthTokenService,

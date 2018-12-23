@@ -7,7 +7,6 @@ import { AuthService } from '../+services/auth.service';
 
 @Injectable()
 export class AuthFacade {
-  private authenticated: boolean;
 
   private loggedInUser = new BehaviorSubject<User>(null);
   loggedInUser$ = this.loggedInUser.asObservable();
@@ -18,14 +17,13 @@ export class AuthFacade {
   ) { }
 
   isAuthenticated() {
-    return this.authenticated;
+    return !!this.authToken.get();
   }
 
   authenticate(auth: Authenticate) {
     return this.service.login(auth).pipe(
       tap((user: User) => {
         this.authToken.set(user.token);
-        this.authenticated = true;
         this.loggedInUser.next(user);
       })
     );
@@ -35,7 +33,6 @@ export class AuthFacade {
     return this.service.logout().pipe(
       tap(() => {
         this.authToken.clear();
-        this.authenticated = false;
         this.loggedInUser.next(null);
       })
     );

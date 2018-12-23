@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit {
 
   initForm() {
     this.loginForm = this.formBuilder.group({
-      username: this.formBuilder.control('', Validators.required),
-      password: this.formBuilder.control('', Validators.required)
+      username: this.formBuilder.control('will.smith', Validators.required),
+      password: this.formBuilder.control('P@ssword', Validators.required)
     });
   }
 
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     this.facade.authenticate(this.loginForm.value).subscribe(
       (success) => {
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/');
       },
       (error) => {
         this.submitted = false;

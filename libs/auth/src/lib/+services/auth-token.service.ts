@@ -7,15 +7,15 @@ export class AuthTokenService {
   constructor() { }
 
   set(token: string) {
-    localStorage.setItem(this.TOKEN_KEY, token);
+    sessionStorage.setItem(this.TOKEN_KEY, token);
   }
 
   get(): string {
-    return localStorage.getItem(this.TOKEN_KEY);
+    return sessionStorage.getItem(this.TOKEN_KEY);
   }
 
   clear() {
-    localStorage.removeItem(this.TOKEN_KEY);
+    sessionStorage.removeItem(this.TOKEN_KEY);
   }
 
 }
