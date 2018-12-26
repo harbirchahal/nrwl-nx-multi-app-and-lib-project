@@ -1,1 +1,3 @@
-export * from './src/data-models';
+export * from './src/authenticate';
+export * from './src/user';
+export * from './src/profile';
