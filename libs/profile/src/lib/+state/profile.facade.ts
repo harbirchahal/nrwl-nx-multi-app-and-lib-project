@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-import { ProfileState, Entity } from './profile.reducer';
+import { Profile } from '@myorg/data-models';
+import { ProfileState } from './profile.reducer';
 import { profileQuery } from './profile.selectors';
 import { LoadProfileAction, SaveProfileAction } from './profile.actions';
 
@@ -14,7 +15,7 @@ export class ProfileFacade {
     this.store.dispatch(new LoadProfileAction());
   }
 
-  saveProfile(e: Entity) {
+  saveProfile(e: Profile) {
     this.store.dispatch(new SaveProfileAction(e));
   }
 }

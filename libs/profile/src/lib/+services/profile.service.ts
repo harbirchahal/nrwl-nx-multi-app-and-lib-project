@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of as observableOf } from 'rxjs';
-import { Entity } from '../+state/profile.reducer';
+import { Profile } from '@myorg/data-models';
 import { delay } from 'rxjs/operators';
 
 const apiUrl = 'http://localhost:3000';
@@ -12,11 +12,11 @@ export class ProfileService {
 
   constructor(private http: HttpClient) {}
 
-  getProfile(): Observable<Entity> {
-    return this.http.get<Entity>(this.baseUrl);
+  getProfile(): Observable<Profile> {
+    return this.http.get<Profile>(this.baseUrl);
   }
 
-  postProfile(e: Entity): Observable<Entity> {
-    return this.http.post<Entity>(this.baseUrl, e).pipe(delay(1000));
+  postProfile(e: Profile): Observable<Profile> {
+    return this.http.post<Profile>(this.baseUrl, e).pipe(delay(1000));
   }
 }

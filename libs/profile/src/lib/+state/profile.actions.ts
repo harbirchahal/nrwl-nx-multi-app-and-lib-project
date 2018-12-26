@@ -1,6 +1,6 @@
 import { RouterAction } from '@ngrx/router-store';
 import { Action } from '@ngrx/store';
-import { Entity } from './profile.reducer';
+import { Profile } from '@myorg/data-models';
 
 interface ActionWithPayload extends Action {
   payload: any;
@@ -21,23 +21,23 @@ export class LoadProfileAction implements Action {
 export class ProfileLoadedAction implements ActionWithPayload {
   readonly type = ProfileActionTypes.LoadSuccess;
 
-  constructor(public payload: Entity) {}
+  constructor(public payload: Profile) {}
 }
 
 export class SaveProfileAction implements ActionWithPayload {
   readonly type = ProfileActionTypes.Save;
 
-  constructor(public payload: Entity) {}
+  constructor(public payload: Profile) {}
 }
 
 export class ProfileSavedAction implements ActionWithPayload {
   readonly type = ProfileActionTypes.SaveSuccess;
 
-  constructor(public payload: Entity) {}
+  constructor(public payload: Profile) {}
 }
 
 export type ProfileAction =
-  | RouterAction<Entity>
+  | RouterAction<Profile>
   | LoadProfileAction
   | ProfileLoadedAction
   | SaveProfileAction

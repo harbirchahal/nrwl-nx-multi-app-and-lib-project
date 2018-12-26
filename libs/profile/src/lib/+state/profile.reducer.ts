@@ -1,14 +1,10 @@
 import { ProfileAction, ProfileActionTypes } from './profile.actions';
+import { Profile } from '@myorg/data-models';
 
 export const PROFILE_FEATURE_KEY = 'Profile';
 
-export interface Entity {
-  firstName: string;
-  lastName: string;
-}
-
 export interface ProfileState {
-  entity: Entity;
+  entity: Profile;
   loaded: boolean;
 }
 
