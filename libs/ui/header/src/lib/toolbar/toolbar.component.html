@@ -1,8 +1,11 @@
 <header>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span routerLink="/">{{ title }}</span>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
+      <div>
+        <a routerLink="/"><mat-icon>home</mat-icon></a>
+        <span>{{ title }}</span>
+      </div>
+      <button mat-button [matMenuTriggerFor]="menu">
         <mat-icon>mood</mat-icon>
         <mat-icon>expand_more</mat-icon>
       </button>
@@ -11,11 +14,13 @@
 </header>
 
 <mat-menu #menu="matMenu">
-  <button mat-menu-item routerLink="profile">
-    <mat-icon>person_outline</mat-icon>
-    <span>Profile</span>
-  </button>
-  <mat-divider></mat-divider>
+  <ng-container *ngIf="profileMenu">
+    <button mat-menu-item routerLink="profile">
+      <mat-icon>person_outline</mat-icon>
+      <span>Profile</span>
+    </button>
+    <mat-divider></mat-divider>
+  </ng-container>
   <button mat-menu-item routerLink="/logout">
     <mat-icon>logout</mat-icon>
     <span>Logout</span>

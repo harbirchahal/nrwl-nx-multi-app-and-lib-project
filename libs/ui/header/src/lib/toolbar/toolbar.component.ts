@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
   @Input() title: string;
+  @Input('showProfile') profileMenu = true;
 
   constructor() {}
 
