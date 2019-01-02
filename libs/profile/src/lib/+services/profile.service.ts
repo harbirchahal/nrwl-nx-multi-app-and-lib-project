@@ -13,7 +13,7 @@ export class ProfileService {
   constructor(private http: HttpClient) {}
 
   getProfile(): Observable<Profile> {
-    return this.http.get<Profile>(this.baseUrl);
+    return this.http.get<Profile>(this.baseUrl).pipe(delay(1000));
   }
 
   postProfile(e: Profile): Observable<Profile> {
