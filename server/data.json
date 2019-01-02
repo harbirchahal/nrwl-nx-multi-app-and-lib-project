@@ -1,9 +1,13 @@
 {
-  "login": {
-    "id": 1,
-    "token": "myorg-auth-token",
+  "login": [{
+    "id": "client",
+    "token": "client-auth-token",
     "role": "client"
-  },
+  }, {
+    "id": "admin",
+    "token": "admin-auth-token",
+    "role": "admin"
+  }],
   "logout": {},
   "profile": {
     "firstName": "Will",
