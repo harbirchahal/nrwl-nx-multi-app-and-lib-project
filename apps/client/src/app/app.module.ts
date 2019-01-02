@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import { AppRouterModule } from './app.routes';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { HomeComponent } from './home/home.component';
   ],
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

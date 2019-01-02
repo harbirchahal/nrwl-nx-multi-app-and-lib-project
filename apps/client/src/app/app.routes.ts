@@ -3,6 +3,7 @@ import { Route, RouterModule } from '@angular/router';
 import { AUTH_ROUTES, AuthGuard } from '@myorg/auth';
 import { PROFILE_ROUTES } from '@myorg/profile';
 import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Route[] = [
   {
@@ -16,6 +17,11 @@ export const routes: Route[] = [
     component: HomeComponent,
     canActivate: [AuthGuard],
     children: [
+      {
+        path: '',
+        component: DashboardComponent,
+        pathMatch: 'full'
+      },
       ...PROFILE_ROUTES
     ]
   },
