@@ -15,7 +15,7 @@ export class AuthService {
   ) { }
 
   login(auth: Authenticate) {
-    return this.http.get<User>(this.loginUrl).pipe(delay(1000));
+    return this.http.get<User>(`${this.loginUrl}/${auth.username}`).pipe(delay(1000));
   }
 
   logout() {
