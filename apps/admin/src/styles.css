@@ -9,3 +9,15 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
+/*
+Primeng style overwrite
+*/
+
+body .ui-messages {
+  margin: 1px 0;
+}
+
+body .ui-messages .ui-messages-icon {
+  display: none;
+}
