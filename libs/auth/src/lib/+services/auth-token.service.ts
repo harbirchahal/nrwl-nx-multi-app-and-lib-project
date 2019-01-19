@@ -14,6 +14,10 @@ export class AuthTokenService {
     return sessionStorage.getItem(this.TOKEN_KEY);
   }
 
+  has(): boolean {
+    return !!this.get();
+  }
+
   clear() {
     sessionStorage.removeItem(this.TOKEN_KEY);
   }

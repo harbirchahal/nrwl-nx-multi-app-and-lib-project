@@ -15,11 +15,12 @@ export class AuthService {
   ) { }
 
   login(auth: Authenticate) {
-    return this.http.get<User>(`${this.loginUrl}/${auth.username}`).pipe(delay(1000));
+    return this.http.post<User>(this.loginUrl, auth).pipe(delay(1000));
   }
 
   logout() {
-    return this.http.get<void>(this.logoutUrl).pipe(delay(1000));
+    return this.http.post(this.logoutUrl, {},
+      { responseType: 'text' /* Handle empty response */}).pipe(delay(1000));
   }
 
 }

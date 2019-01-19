@@ -1,18 +1,23 @@
-import { Injectable, Injector } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AuthFacade } from '../+state';
+import { AuthTokenService } from './auth-token.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  facade: AuthFacade;
 
   constructor(
-    private injector: Injector
+    private authToken: AuthTokenService
   ) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    this.facade = this.injector.get(AuthFacade);
+    if (this.authToken.has()) {
+      req = req.clone({
+        setHeaders: {
+          Authorization: this.authToken.get()
+        }
+      });
+    }
     return next.handle(req);
   }
 
