@@ -1,16 +1,6 @@
 {
-  "login": [{
-    "id": "client",
-    "token": "client-auth-token",
-    "role": "client"
-  }, {
-    "id": "admin",
-    "token": "admin-auth-token",
-    "role": "admin"
-  }],
-  "logout": {},
   "profile": {
-    "firstName": "Will",
-    "lastName": "Smith"
+    "firstName": "John",
+    "lastName": "Doe"
   }
 }

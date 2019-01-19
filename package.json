@@ -25,7 +25,7 @@
     "workspace-schematic": "./node_modules/.bin/nx workspace-schematic",
     "dep-graph": "./node_modules/.bin/nx dep-graph",
     "help": "./node_modules/.bin/nx help",
-    "server": "json-server server/data.json"
+    "server": "ts-node ./server/main.ts"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +40,7 @@
     "@angular/platform-browser-dynamic": "^7.0.0",
     "@angular/router": "^7.0.0",
     "@ngrx/effects": "6.1.0",
+    "@ngrx/entity": "6.1.0",
     "@ngrx/router-store": "6.1.0",
     "@ngrx/store": "6.1.0",
     "@nrwl/nx": "7.1.0",
@@ -47,8 +48,7 @@
     "primeicons": "^1.0.0",
     "primeng": "^6.1.7",
     "rxjs": "~6.3.3",
-    "zone.js": "^0.8.26",
-    "@ngrx/entity": "6.1.0"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
