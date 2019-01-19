@@ -25,6 +25,10 @@ export const routes: Route[] = [
       ...PROFILE_ROUTES
     ]
   },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
 
 @NgModule({
