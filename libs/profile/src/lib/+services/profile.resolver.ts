@@ -41,9 +41,8 @@ export class ProfileResolver implements Resolve<Observable<boolean>> {
             this.messagesFacade.clear();
             return true;
           }),
-          catchError((err: HttpErrorResponse) => {
-            console.error('Profile Load Error', err);
-            this.messagesFacade.error('Unable to load profile:', err.message);
+          catchError(error => {
+            this.messagesFacade.error('Unable to load profile:', error.message);
             return empty();
           })
         );
