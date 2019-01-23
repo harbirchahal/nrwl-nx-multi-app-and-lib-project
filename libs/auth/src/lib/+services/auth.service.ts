@@ -3,12 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { tap, delay } from 'rxjs/operators';
 import { User, Authenticate } from '@myorg/data-models';
 
-const apiUrl = 'http://localhost:3000';
-
 @Injectable()
 export class AuthService {
-  private loginUrl = `${apiUrl}/login`;
-  private logoutUrl = `${apiUrl}/logout`;
+  private loginUrl = '/api/login';
+  private logoutUrl = '/api/logout';
 
   constructor(
     private http: HttpClient
